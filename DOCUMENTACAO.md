@@ -4,7 +4,7 @@
 **Valor:** 20 pontos  
 **Entrega/apresentação:** 25/11/2026  
 **Alvo:** x86-64 + Windows (MinGW/GCC)  
-**Repositório base:** [CompiladorMACSLANG](https://github.com/DevLucasLopes47/CompiladorMACSLANG)
+**Repositório:** [atv.compiladores1.0](https://github.com/Pedrochristovam/atv.compiladores1.0)
 
 ---
 
@@ -102,18 +102,18 @@ Tipos reconhecidos: `int`, `float`, `char`, `bool`, `string`.
 
 ---
 
-## 5. O que foi corrigido / adicionado em relação ao repo original
+## 5. Principais decisões / entregas deste projeto
 
-| Item | Antes | Agora |
-|------|-------|-------|
-| `while` | Bug: `"for"|"while"` → token `FOR` | Token `WHILE` separado |
-| Geração de código | Só imprimia AST | Emite `.s` x86-64 |
-| Módulos | Semântica misturada no parser | `semantica.c` + `codegen.c` + `main.c` |
-| Operadores | Só `+` `-` | `* / == != < > <= >= && \|\| !` |
-| `for` | Sintaxe estranha | Formato do PDF |
-| Tipos/literais | Quase só `int` | float/bool/char/string no léxico/parser |
-| Build | Binários soltos no git | `Makefile` + `.gitignore` |
-| Documentação | README parcial | Este documento + legendas no código |
+| Item | Situação no compilador |
+|------|------------------------|
+| `while` | Token `WHILE` próprio (separado do `FOR`) |
+| Geração de código | Emite `.s` x86-64 Windows |
+| Módulos | `lexico` + `parser` + `semantica` + `codegen` + `main` |
+| Operadores | `+ - * / == != < > <= >= && \|\| !` |
+| `for` | Formato do PDF: `for (init; cond; incr)` |
+| Tipos/literais | int, float, bool, char, string no léxico/parser |
+| Build | `Makefile` + `.gitignore` |
+| Documentação | Este documento + legendas no código + guia PDF |
 
 ---
 
